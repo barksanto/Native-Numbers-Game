@@ -1,9 +1,9 @@
 import { Button, View, Text } from "react-native"
 
-function PrimaryButton(props) {
+function PrimaryButton({ children }) {
   return (
     <View>
-      <Text>{props.children}</Text>
+      <Text>{children}</Text>
     </View>
   )
 }
