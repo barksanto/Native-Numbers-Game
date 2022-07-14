@@ -9,12 +9,14 @@ function PrimaryButton({ children }) {
     <View style={styles.buttonOuterContainer}>
       <Pressable
         onPress={pressHandler}
-        style={({ pressed }) =>
+        android_ripple={{ color: "#540233" }} //Android color change
+
+
+        style={({ pressed }) => // iOS color change
           pressed
             ? [styles.buttonInnerContainer, styles.pressed]
             : styles.buttonInnerContainer
         }
-        android_ripple={{ color: "#540233" }}
       >
         <Text style={styles.buttonText}>{children}</Text>
       </Pressable>
