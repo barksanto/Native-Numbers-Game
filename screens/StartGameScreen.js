@@ -4,7 +4,14 @@ import PrimaryButton from "../components/PrimaryButton"
 function StartGameScreen() {
   return (
     <View style={styles.inputContainer}>
-      <TextInput placeholder="#" style={styles.numberInput} />
+      <TextInput
+        placeholder="#"
+        style={styles.numberInput}
+        maxLength={2}
+        keyboardType="number-pad"
+        autoCapitalize="none"
+        autoCorrect={false}
+      />
       <PrimaryButton>Reset</PrimaryButton>
       <PrimaryButton>Confirm</PrimaryButton>
     </View>
@@ -18,7 +25,7 @@ const styles = StyleSheet.create({
     // flex: 1, // tells component to take up as much space available - commenting it out allows it to use only as much space as it needs
     padding: 16,
     marginTop: 100,
-    backgroundColor: "#72063c",
+    backgroundColor: "#4e0329",
     marginHorizontal: 24,
     borderRadius: 6,
 
@@ -41,6 +48,7 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     fontWeight: "bold",
     width: 80,
+    textAlign: "center",
     alignSelf: "center",
   },
 })
