@@ -11,11 +11,17 @@ function StartGameScreen() {
   }
 
   function confirmInputHandler() {
-    if (enteredNumber >= 1 && enteredNumber <= 99) { // if passes
+    if (enteredNumber >= 1 && enteredNumber <= 99) {
+      // if passes
       console.log("legit number")
-    } else { // if not passes
+    } else {
+      // if not passes
       console.log("not a legit number")
     }
+  }
+
+  function resetInputHandler() {
+    setEnteredNumber("")
   }
 
   return (
@@ -33,7 +39,7 @@ function StartGameScreen() {
       />
       <View style={styles.buttonsContainer}>
         <View style={styles.buttonContainer}>
-          <PrimaryButton>Reset</PrimaryButton>
+          <PrimaryButton onPress={resetInputHandler}>Reset</PrimaryButton>
         </View>
         <View style={styles.buttonContainer}>
           <PrimaryButton onPress={confirmInputHandler}>Confirm</PrimaryButton>
