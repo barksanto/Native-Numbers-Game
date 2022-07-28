@@ -5,7 +5,7 @@ import Colors from "../constants/colors"
 
 function StartGameScreen({ onPickNumber }) {
   const [enteredNumber, setEnteredNumber] = useState("")
-  // const [roundNumber, setRoundNumber] = useState(0)  // play code
+  const [roundNumber, setRoundNumber] = useState(0)
 
   function handleInputChange(enteredText) {
     setEnteredNumber(enteredText)
@@ -23,7 +23,7 @@ function StartGameScreen({ onPickNumber }) {
     }
     console.log("Valid number! We can move to game screen now")
     onPickNumber(chosenNumber)
-    // setRoundNumber((prevRoundNum) => (prevRoundNum += 1)) // play code
+    // setRoundNumber((prevRoundNum) => (prevRoundNum += 1))  play
   }
 
   function resetInputHandler() {
@@ -51,6 +51,10 @@ function StartGameScreen({ onPickNumber }) {
         <View style={styles.buttonContainer}>
           <PrimaryButton onPress={confirmInputHandler}>Confirm</PrimaryButton>
         </View>
+
+        <View>
+          <Text>{roundNumber}</Text>
+        </View>
       </View>
     </View>
   )
@@ -63,7 +67,7 @@ const styles = StyleSheet.create({
     // flex: 1, // tells component to take up as much space available - commenting it out allows it to use only as much space as it needs
     padding: 16,
     marginTop: 100,
-    backgroundColor: Colors.darkPlum,
+    backgroundColor: "#4e0329",
     marginHorizontal: 24,
     borderRadius: 6,
 
