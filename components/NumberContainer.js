@@ -1,4 +1,5 @@
-import { View, Text } from "react-native"
+import { View, Text, StyleSheet } from "react-native"
+import Colors from "../constants/colors"
 
 function NumberContainer({ children }) {
   return (
@@ -9,3 +10,13 @@ function NumberContainer({ children }) {
 }
 
 export default NumberContainer
+
+const styles = StyleSheet.create({
+  container: {
+    borderWidth: 4,
+    borderColor: Colors.mainYellow,
+    padding: 24,
+    borderRadius: 8,
+  },
+  numbertText: {},
+})
