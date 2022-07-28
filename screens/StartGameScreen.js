@@ -1,9 +1,11 @@
-import { View, TextInput, StyleSheet, Alert } from "react-native"
+import { View, TextInput, StyleSheet, Alert, Text } from "react-native"
 import PrimaryButton from "../components/PrimaryButton"
 import { useState } from "react"
+import Colors from "../constants/colors"
 
 function StartGameScreen({ onPickNumber }) {
   const [enteredNumber, setEnteredNumber] = useState("")
+  // const [roundNumber, setRoundNumber] = useState(0)  // play code
 
   function handleInputChange(enteredText) {
     setEnteredNumber(enteredText)
@@ -21,6 +23,7 @@ function StartGameScreen({ onPickNumber }) {
     }
     console.log("Valid number! We can move to game screen now")
     onPickNumber(chosenNumber)
+    // setRoundNumber((prevRoundNum) => (prevRoundNum += 1)) // play code
   }
 
   function resetInputHandler() {
@@ -40,6 +43,7 @@ function StartGameScreen({ onPickNumber }) {
         value={enteredNumber}
         onChangeText={handleInputChange}
       />
+
       <View style={styles.buttonsContainer}>
         <View style={styles.buttonContainer}>
           <PrimaryButton onPress={resetInputHandler}>Reset</PrimaryButton>
@@ -59,7 +63,7 @@ const styles = StyleSheet.create({
     // flex: 1, // tells component to take up as much space available - commenting it out allows it to use only as much space as it needs
     padding: 16,
     marginTop: 100,
-    backgroundColor: "#4e0329",
+    backgroundColor: Colors.darkPlum,
     marginHorizontal: 24,
     borderRadius: 6,
 
@@ -76,9 +80,9 @@ const styles = StyleSheet.create({
   numberInput: {
     height: 50,
     fontSize: 32,
-    borderBottomColor: "#ddb52f",
+    borderBottomColor: Colors.mainYellow,
     borderBottomWidth: 2,
-    color: "#ddb52f",
+    color: Colors.mainYellow,
     marginVertical: 8,
     fontWeight: "bold",
     width: 80,
