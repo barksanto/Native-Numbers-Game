@@ -3,8 +3,8 @@ import Colors from "../constants/colors"
 
 function NumberContainer({ children }) {
   return (
-    <View>
-      <Text>{children}</Text>
+    <View style={styles.container}>
+      <Text style={styles.numbertText}>{children}</Text>
     </View>
   )
 }
@@ -16,7 +16,15 @@ const styles = StyleSheet.create({
     borderWidth: 4,
     borderColor: Colors.mainYellow,
     padding: 24,
-    borderRadius: 8,
+    borderRadius: 8, // not supported on Text element, that's why we use View
+    margin: 24,
+    alignItems: "center",
+    justifyContent: "center"
   },
-  numbertText: {},
+  numbertText: {
+    color: Colors.mainYellow,
+    fontSize: 36,
+    fontWeight: "bold",
+
+  },
 })

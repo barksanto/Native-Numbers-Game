@@ -21,8 +21,8 @@ function GameScreen({ userNumber }) {
 
   return (
     <View style={styles.screen}>
-      <Title >Opponents Guess</Title>
-      {/* Guess made my device */}
+      <Title>Opponents Guess</Title>
+      <NumberContainer>{ currentGuess}</NumberContainer>
 
       {/* GUESS */}
       <View>
