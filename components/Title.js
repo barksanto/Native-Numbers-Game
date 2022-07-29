@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
 
-    color: Colors.mainYellow,
+    color: "white",
     textAlign: "center",
     borderWidth: 2,
     borderColor: Colors.mainYellow,
