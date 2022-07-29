@@ -19,6 +19,6 @@ const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 6,
 
-    color: "#ddb52f",
+
   },
 })
