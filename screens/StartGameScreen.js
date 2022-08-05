@@ -14,7 +14,7 @@ function StartGameScreen({ onPickNumber }) {
   function confirmInputHandler() {
     const chosenNumber = parseInt(enteredNumber)
 
-    if (isNaN(chosenNumber) || chosenNumber <= 1 || chosenNumber >= 99) {
+    if (isNaN(chosenNumber) || chosenNumber < 1 || chosenNumber >= 99) {
       // alert("Sorry, not a valid number!")
       Alert.alert("Invalid Input", "Number must be between 1-99", [
         { text: "OKAY", style: "destructive", onPress: resetInputHandler },

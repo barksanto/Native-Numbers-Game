@@ -21,15 +21,16 @@ let maxBoundary = 100;
   
 function GameScreen({ userNumber, onGameOver }) {
   const initialGuess = generateRandomNumBetween(1, 100, userNumber)
+  
   const [currentGuess, setCurrentGuess] = useState(initialGuess)
 
   useEffect(() => {
     if (currentGuess === userNumber) {
       // change state to tell react the game is over
-      onGameOver()
+      onGameOver();
     }
     
-  }, [currentGuess, userNumber,onGameOver])
+  }, [currentGuess, userNumber,onGameOver]) // rerun useEffect if one of these is called/changed
   
 
   function nextGuessHandler(direction) { // lower, greater (strings)
